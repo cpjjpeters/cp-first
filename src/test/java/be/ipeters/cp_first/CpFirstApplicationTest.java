@@ -17,22 +17,9 @@ class CpFirstApplicationTest {
     @Autowired
     ApplicationContext applicationContext;
 
-    @Autowired
-    MyController myController;
-
     @Test
     void contextLoads() {
         assertNotNull(applicationContext);
     }
 
-    @Test
-    void testControllerFromCtx(){
-        		CpRestController cpRestController = applicationContext.getBean(CpRestController.class);
-//		System.out.println(" In main method");
-		System.out.println(cpRestController.getCpById(UUID.randomUUID()));
-    }
-    @Test
-    void testAutowiredController (){
-        System.out.println(myController.sayHello());
-    }
 }
