@@ -1,6 +1,7 @@
 package be.ipeters.cp_first;
 
 import be.ipeters.cp_first.web.controller.CpRestController;
+import be.ipeters.cp_first.web.controller.MyController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,7 +18,7 @@ class CpFirstApplicationTest {
     ApplicationContext applicationContext;
 
     @Autowired
-    CpRestController   cpRestController;
+    MyController myController;
 
     @Test
     void contextLoads() {
@@ -32,6 +33,6 @@ class CpFirstApplicationTest {
     }
     @Test
     void testAutowiredController (){
-        System.out.println(cpRestController.sayHello());
+        System.out.println(myController.sayHello());
     }
 }
